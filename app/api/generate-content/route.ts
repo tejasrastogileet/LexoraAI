@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${apiKey}`,
-        'HTTP-Referer': 'http://localhost:3000',
+        'HTTP-Referer': process.env.NEXT_PUBLIC_APP_URL || "https://lexora-ai-tau.vercel.app",
         'X-Title': 'AI Social Media Generator',
         'Content-Type': 'application/json'
       },
